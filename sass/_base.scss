@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* Primary Colors
+--------------------------------------*/
+$desaturated-red: hsl(0, 36%, 70%);
+$desaturated-red-trans: hsla(0, 36%, 70%, 0.4);
+$soft-red: hsl(0, 93%, 68%);
+
+/* Neutral Colors
+--------------------------------------*/
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+/* Gradients Colors
+--------------------------------------*/
+$clr-gradient-1-1: hsl(0, 0%, 100%);
+$clr-gradient-1-2: hsl(0, 100%, 98%);
+$clr-gradient-2-1: hsl(0, 80%, 86%);
+$clr-gradient-2-2: hsl(0, 74%, 74%);
+
+/* Colors by element
+--------------------------------------*/
+$clr-bg-btn-1: $clr-gradient-2-1;
+$clr-bg-btn-2: $clr-gradient-2-2;
+$clr-bg-btn-active-1: $clr-gradient-1-1;
+$clr-bg-btn-active-2: $clr-gradient-1-2;
+$clr-bg-input: transparent;
+$clr-border-input: $desaturated-red;
+$clr-shadow-btn: $desaturated-red-trans;
+$clr-txt-header-1: $desaturated-red;
+$clr-txt-header-2: $dark-grayish-red;
+$clr-txt-paragraph: $desaturated-red;
+$clr-txt-placeholder: $desaturated-red-trans;
+$clr-error: $soft-red;
+$clr-txt-attribution: $dark-grayish-red;
+
+/* Breakpoints
+--------------------------------------*/
+$breakpoint-md: 768px;
+$breakpoint-lg: 1000px;
+
+/* Typography
+--------------------------------------*/
+$font-size: 16px;
+$ff-primary: 'Josefin Sans', sans-serif;
+
+/* Reset
+--------------------------------------*/
+html,
+body,
+main,
+h1,
+h2,
+p,
+header,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

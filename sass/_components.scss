@@ -1,0 +1,169 @@
+/* Header
+--------------------------------------*/
+header {
+  width: 100%;
+  @media (min-width: $breakpoint-md) {
+    height: 21%;
+  }
+  .logo {
+    padding: 2rem 0 0 2rem;
+    @media (min-width: $breakpoint-md) {
+      padding: 4rem 0 0 0;
+    }
+    img {
+      height: 1.3rem;
+      @media (min-width: $breakpoint-md) {
+        height: 2.1rem;
+      }
+    }
+  }
+}
+.hero-mobile {
+  margin-top: 1.6rem;
+  height: 16rem;
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+  }
+}
+.hero-desktop {
+  display: none;
+  @media (min-width: $breakpoint-md) {
+    display: block;
+    height: 100%;
+    width: 74%;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+.content {
+  text-align: center;
+  margin-top: 4rem;
+  @media (min-width: $breakpoint-md) {
+    text-align: left;
+  }
+  h1 {
+    color: $clr-txt-header-1;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    @media (min-width: $breakpoint-md) {
+      font-size: 4rem;
+      letter-spacing: 1.1rem;
+      line-height: 4.3rem;
+    }
+    span {
+      color: $clr-txt-header-2;
+      font-weight: 400;
+    }
+  }
+  p {
+    color: $clr-txt-paragraph;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    padding: 1.2rem 2rem 0 2rem;
+    @media (min-width: $breakpoint-md) {
+      padding: 1.3rem 2.5rem 0 0;
+      letter-spacing: 0.05rem;
+      line-height: 1.7rem;
+    }
+  }
+}
+.email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  @media (min-width: $breakpoint-md) {
+    grid-area: content;
+    padding: 2.5rem 0;
+  }
+  &-form {
+    display: flex;
+    flex: 1 1 0;
+    padding-left: 2rem;
+    @media (min-width: $breakpoint-md) {
+      padding-left: 0;
+    }
+  }
+
+  .email__input {
+    background-color: $clr-bg-input;
+    border: 0.01rem solid $clr-border-input;
+    width: 100%;
+    height: 3rem;
+    padding-left: 1.5rem;
+    border-radius: 1.5rem;
+    @media (min-width: $breakpoint-md) {
+      font-size: 1rem;
+      letter-spacing: 0.01rem;
+      padding-left: 2rem;
+      height: 3.5rem;
+    }
+    &:invalid {
+      outline: none;
+      border: 0.1rem solid $clr-error;
+    }
+  }
+  .err-msg {
+    display: none;
+    color: $clr-error;
+    padding: 0.8rem 0 0 2rem;
+    font-size: 0.8rem;
+  }
+  .err-msg.active {
+    display: block;
+  }
+  ::placeholder {
+    color: $clr-txt-placeholder;
+  }
+  &:focus {
+    outline: none;
+  }
+  .email__btn-submit {
+    z-index: 99;
+    position: relative;
+    right: 2.5rem;
+    width: 4rem;
+    height: 3rem;
+    padding: 0;
+    border: 0;
+    border-radius: 1.5rem;
+    background-image: linear-gradient(
+      90deg,
+      $clr-gradient-2-1,
+      $clr-gradient-2-2
+    );
+    box-shadow: 0.1rem 1rem 1rem $clr-shadow-btn;
+    @media (min-width: $breakpoint-md) {
+      height: 3.5rem;
+      width: 7.5rem;
+      right: 3.5rem;
+      border-radius: 1.75rem;
+    }
+    &.error {
+      padding: 0;
+    }
+    &.error::before {
+      content: url(../images/icon-error.svg);
+      position: absolute;
+      right: 4rem;
+      top: 0.75rem;
+      @media (min-width: $breakpoint-md) {
+        right: 7rem;
+        top: 1rem;
+      }
+    }
+  }
+}

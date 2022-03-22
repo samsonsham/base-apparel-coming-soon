@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/* Primary Colors
+--------------------------------------*/
+/* Neutral Colors
+--------------------------------------*/
+/* Gradients Colors
+--------------------------------------*/
+/* Colors by element
+--------------------------------------*/
+/* Breakpoints
+--------------------------------------*/
+/* Typography
+--------------------------------------*/
+/* Reset
+--------------------------------------*/
+html,
+body,
+main,
+h1,
+h2,
+p,
+header,
+input {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(white, #fff5f5);
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    background-image: url(../images/bg-pattern-desktop.svg);
+  }
+}
+
+header,
+main {
+  width: 100%;
+  max-width: 30rem;
+  overflow-x: hidden;
+}
+@media (min-width: 768px) {
+  header,
+main {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content-container {
+    width: 100%;
+    max-width: 31rem;
+    padding: 0 2rem 0 2rem;
+  }
+}
+
+/* Header
+--------------------------------------*/
+header {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  header {
+    height: 21%;
+  }
+}
+header .logo {
+  padding: 2rem 0 0 2rem;
+}
+@media (min-width: 768px) {
+  header .logo {
+    padding: 4rem 0 0 0;
+  }
+}
+header .logo img {
+  height: 1.3rem;
+}
+@media (min-width: 768px) {
+  header .logo img {
+    height: 2.1rem;
+  }
+}
+
+.hero-mobile {
+  margin-top: 1.6rem;
+  height: 16rem;
+}
+@media (min-width: 768px) {
+  .hero-mobile {
+    display: none;
+  }
+}
+.hero-mobile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.hero-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero-desktop {
+    display: block;
+    height: 100%;
+    width: 74%;
+  }
+}
+.hero-desktop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.content {
+  text-align: center;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .content {
+    text-align: left;
+  }
+}
+.content h1 {
+  color: #ce9797;
+  font-size: 2.5rem;
+  font-weight: 200;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .content h1 {
+    font-size: 4rem;
+    letter-spacing: 1.1rem;
+    line-height: 4.3rem;
+  }
+}
+.content h1 span {
+  color: #413a3a;
+  font-weight: 400;
+}
+.content p {
+  color: #ce9797;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  padding: 1.2rem 2rem 0 2rem;
+}
+@media (min-width: 768px) {
+  .content p {
+    padding: 1.3rem 2.5rem 0 0;
+    letter-spacing: 0.05rem;
+    line-height: 1.7rem;
+  }
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .email {
+    grid-area: content;
+    padding: 2.5rem 0;
+  }
+}
+.email-form {
+  display: flex;
+  flex: 1 1 0;
+  padding-left: 2rem;
+}
+@media (min-width: 768px) {
+  .email-form {
+    padding-left: 0;
+  }
+}
+.email .email__input {
+  background-color: transparent;
+  border: 0.01rem solid #ce9797;
+  width: 100%;
+  height: 3rem;
+  padding-left: 1.5rem;
+  border-radius: 1.5rem;
+}
+@media (min-width: 768px) {
+  .email .email__input {
+    font-size: 1rem;
+    letter-spacing: 0.01rem;
+    padding-left: 2rem;
+    height: 3.5rem;
+  }
+}
+.email .email__input:invalid {
+  outline: none;
+  border: 0.1rem solid #f96262;
+}
+.email .err-msg {
+  display: none;
+  color: #f96262;
+  padding: 0.8rem 0 0 2rem;
+  font-size: 0.8rem;
+}
+.email .err-msg.active {
+  display: block;
+}
+.email ::placeholder {
+  color: rgba(206, 151, 151, 0.4);
+}
+.email:focus {
+  outline: none;
+}
+.email .email__btn-submit {
+  z-index: 99;
+  position: relative;
+  right: 2.5rem;
+  width: 4rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(90deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0.1rem 1rem 1rem rgba(206, 151, 151, 0.4);
+}
+@media (min-width: 768px) {
+  .email .email__btn-submit {
+    height: 3.5rem;
+    width: 7.5rem;
+    right: 3.5rem;
+    border-radius: 1.75rem;
+  }
+}
+.email .email__btn-submit.error {
+  padding: 0;
+}
+.email .email__btn-submit.error::before {
+  content: url(../images/icon-error.svg);
+  position: absolute;
+  right: 4rem;
+  top: 0.75rem;
+}
+@media (min-width: 768px) {
+  .email .email__btn-submit.error::before {
+    right: 7rem;
+    top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.comp.css.map */
