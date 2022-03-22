@@ -2,16 +2,18 @@ const showErrMsg = (isShowMsg, msg) => {
   const elemMsg = document.querySelector('.err-msg');
   const elemBtn = document.querySelector('.email__btn-submit');
   const elemInput = document.querySelector('.email__input');
+  const softRed = 'hsl(0, 93%, 68%)';
+  const desaturatedRed = 'hsl(0, 36%, 70%)';
 
   if (isShowMsg) {
     elemMsg.classList.add('active');
     elemBtn.classList.add('error');
-    elemInput.style.border = '0.1rem solid hsl(0, 93%, 68%)';
+    elemInput.style.border = `0.1rem solid ${softRed}`;
     elemMsg.innerHTML = msg;
   } else {
     elemMsg.classList.remove('active');
     elemBtn.classList.remove('error');
-    elemInput.style.border = '0.01rem solid hsl(0, 36%, 70%)';
+    elemInput.style.border = `0.01rem solid ${desaturatedRed}`;
     elemMsg.innerHTML = msg;
     elemInput.value = '';
   }
