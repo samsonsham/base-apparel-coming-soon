@@ -15,16 +15,16 @@ const submitForm = () => {
 const formSubmitHandler = (e) => {
   e.preventDefault();
 
-  const emptyMsg = 'Email cannot be empty';
-  const errMsg = 'Please provide a valid email';
+  const msgEmpty = 'Email cannot be empty';
+  const msgInvalid = 'Please provide a valid email';
   const elemInput = document.querySelector('.email__input');
 
   // Validate email by HTML5 input type email
   if (elemInput.value === '') {
-    showErrMsg(emptyMsg);
+    showErrMsg(msgEmpty);
   } else if (elemInput.matches(':valid')) {
     submitForm();
   } else {
-    showErrMsg(errMsg);
+    showErrMsg(msgInvalid);
   }
 };
