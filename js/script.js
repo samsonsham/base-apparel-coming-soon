@@ -10,10 +10,10 @@ const msg = {
 };
 const clr = {
   softRed: 'hsl(0, 93%, 68%)',
-  desaturatedRed: 'hsl(0, 36%, 70%)',
+  desaturatedRed: '#ce9797',
 };
 
-const invalid = () => {
+const showError = () => {
   elem.msg.removeAttribute('hidden');
   elem.btn.classList.add('error');
   elem.input.style.border = `0.1rem solid ${clr.softRed}`;
@@ -29,18 +29,25 @@ const reset = () => {
   elem.input.value = '';
   elem.msg.setAttribute('hidden', '');
   elem.btn.classList.remove('error');
-  elem.input.style.border = `0.1rem solid ${clr.desaturatedRed}`;
+  elem.input.style.border = `0.01rem solid ${clr.desaturatedRed}`;
 };
 
 const submitForm = () => {
   alert('Email Address submitted!');
 };
 
-const submitHandler = (event) => {
-  event.preventDefault();
-  submitForm();
-  reset();
+const validate = () => {
+  return elem.form.checkValidity();
 };
 
-elem.input.oninvalid = invalid;
-elem.form.onsubmit = submitHandler;
+elem.btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const valid = validate();
+
+  if (valid) {
+    submitForm();
+    reset();
+  } else {
+    showError();
+  }
+});
