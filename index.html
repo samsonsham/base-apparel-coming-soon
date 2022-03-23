@@ -51,6 +51,7 @@
                 type="email"
                 placeholder="Email Address"
                 class="email__input"
+                required
               />
               <button
                 id="email__btn-submit"
@@ -58,12 +59,11 @@
                 type="submit"
                 form="email-form"
                 class="email__btn-submit"
-                onclick="formSubmitHandler(event);"
               >
                 <img src="./images/icon-arrow.svg" alt="" />
               </button>
             </form>
-            <p class="err-msg"></p>
+            <p class="err-msg" hidden></p>
           </div>
           <!-- End of email -->
         </div>

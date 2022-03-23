@@ -233,6 +233,7 @@ header .logo img {
 .email .email__input {
   background-color: transparent;
   border: 0.01rem solid #ce9797;
+  outline: none;
   width: 100%;
   height: 3rem;
   padding-left: 1.5rem;
@@ -252,12 +253,11 @@ header .logo img {
     height: 2.5rem;
   }
 }
-.email .email__input:invalid {
-  outline: none;
-  border: 0.1rem solid #f96262;
+.email .email__input:required {
+  border: 0.01rem solid #ce9797;
+  background-color: transparent;
 }
 .email .err-msg {
-  display: none;
   color: #f96262;
   padding: 0.8rem 0 0 2rem;
   font-size: 0.8rem;
@@ -266,9 +266,6 @@ header .logo img {
   .email .err-msg {
     padding: 0.6rem 0 0 1rem;
   }
-}
-.email .err-msg.active {
-  display: block;
 }
 .email ::placeholder {
   color: rgba(206, 151, 151, 0.4);

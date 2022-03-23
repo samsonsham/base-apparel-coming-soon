@@ -1,42 +1,46 @@
-const showErrMsg = (isShowMsg, msg) => {
-  const elemMsg = document.querySelector('.err-msg');
-  const elemBtn = document.querySelector('.email__btn-submit');
-  const elemInput = document.querySelector('.email__input');
-  const softRed = 'hsl(0, 93%, 68%)';
-  const desaturatedRed = 'hsl(0, 36%, 70%)';
+const elem = {
+  form: document.querySelector('.email-form'),
+  input: document.querySelector('.email__input'),
+  btn: document.querySelector('.email__btn-submit'),
+  msg: document.querySelector('.err-msg'),
+};
+const msg = {
+  empty: 'Email cannot be empty',
+  invalid: 'Please provide a valid email',
+};
+const clr = {
+  softRed: 'hsl(0, 93%, 68%)',
+  desaturatedRed: 'hsl(0, 36%, 70%)',
+};
 
-  if (isShowMsg) {
-    elemMsg.classList.add('active');
-    elemBtn.classList.add('error');
-    elemInput.style.border = `0.1rem solid ${softRed}`;
-    elemMsg.innerHTML = msg;
+const invalid = () => {
+  elem.msg.removeAttribute('hidden');
+  elem.btn.classList.add('error');
+  elem.input.style.border = `0.1rem solid ${clr.softRed}`;
+
+  if (elem.input.value === '') {
+    elem.msg.innerHTML = msg.empty;
   } else {
-    elemMsg.classList.remove('active');
-    elemBtn.classList.remove('error');
-    elemInput.style.border = `0.01rem solid ${desaturatedRed}`;
-    elemMsg.innerHTML = msg;
-    elemInput.value = '';
+    elem.msg.innerHTML = msg.invalid;
   }
+};
+
+const reset = () => {
+  elem.input.value = '';
+  elem.msg.setAttribute('hidden', '');
+  elem.btn.classList.remove('error');
+  elem.input.style.border = `0.1rem solid ${clr.desaturatedRed}`;
 };
 
 const submitForm = () => {
-  showErrMsg(false, '');
   alert('Email Address submitted!');
 };
 
-const formSubmitHandler = (e) => {
-  e.preventDefault();
-
-  const msgEmpty = 'Email cannot be empty';
-  const msgInvalid = 'Please provide a valid email';
-  const elemInput = document.querySelector('.email__input');
-
-  // Validate email by HTML5 input type email
-  if (elemInput.value === '') {
-    showErrMsg(true, msgEmpty);
-  } else if (elemInput.matches(':valid')) {
-    submitForm();
-  } else {
-    showErrMsg(true, msgInvalid);
-  }
+const submitHandler = (event) => {
+  event.preventDefault();
+  submitForm();
+  reset();
 };
+
+elem.input.oninvalid = invalid;
+elem.form.onsubmit = submitHandler;
