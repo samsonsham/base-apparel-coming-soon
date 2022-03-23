@@ -5,10 +5,14 @@ header {
   @media (min-width: $breakpoint-md) {
     height: 21%;
   }
+
   .logo {
     padding: 2rem 0 0 2rem;
     @media (min-width: $breakpoint-md) {
       padding: 4rem 0 0 0;
+    }
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      padding: 1rem 0 0 0;
     }
     img {
       height: 1.3rem;
@@ -51,6 +55,9 @@ header {
   @media (min-width: $breakpoint-md) {
     text-align: left;
   }
+  @media (max-height: $breakpoint-mobile-landscape-h) {
+    margin-top: 0rem;
+  }
   h1 {
     color: $clr-txt-header-1;
     font-size: 2.5rem;
@@ -61,6 +68,10 @@ header {
       font-size: 4rem;
       letter-spacing: 1.1rem;
       line-height: 4.3rem;
+    }
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      font-size: 2.5rem;
+      line-height: 3rem;
     }
     span {
       color: $clr-txt-header-2;
@@ -78,6 +89,10 @@ header {
       letter-spacing: 0.05rem;
       line-height: 1.7rem;
     }
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      font-size: 0.8rem;
+      line-height: 1rem;
+    }
   }
 }
 .email {
@@ -88,6 +103,9 @@ header {
   @media (min-width: $breakpoint-md) {
     grid-area: content;
     padding: 2.5rem 0;
+  }
+  @media (max-height: $breakpoint-mobile-landscape-h) {
+    padding: 1rem 0;
   }
   &-form {
     display: flex;
@@ -111,6 +129,10 @@ header {
       padding-left: 2rem;
       height: 3.5rem;
     }
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      font-size: 0.9rem;
+      height: 2.5rem;
+    }
     &:invalid {
       outline: none;
       border: 0.1rem solid $clr-error;
@@ -121,7 +143,11 @@ header {
     color: $clr-error;
     padding: 0.8rem 0 0 2rem;
     font-size: 0.8rem;
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      padding: 0.6rem 0 0 1rem;
+    }
   }
+
   .err-msg.active {
     display: block;
   }
@@ -152,6 +178,10 @@ header {
       right: 3.5rem;
       border-radius: 1.75rem;
     }
+    @media (max-height: $breakpoint-mobile-landscape-h) {
+      height: 2.5rem;
+      width: 6rem;
+    }
     &.error {
       padding: 0;
     }
@@ -163,6 +193,10 @@ header {
       @media (min-width: $breakpoint-md) {
         right: 7rem;
         top: 1rem;
+      }
+      @media (max-height: $breakpoint-mobile-landscape-h) {
+        right: 5.5rem;
+        top: 0.5rem;
       }
     }
   }

@@ -97,6 +97,11 @@ header .logo {
     padding: 4rem 0 0 0;
   }
 }
+@media (max-height: 420px) {
+  header .logo {
+    padding: 1rem 0 0 0;
+  }
+}
 header .logo img {
   height: 1.3rem;
 }
@@ -148,6 +153,11 @@ header .logo img {
     text-align: left;
   }
 }
+@media (max-height: 420px) {
+  .content {
+    margin-top: 0rem;
+  }
+}
 .content h1 {
   color: #ce9797;
   font-size: 2.5rem;
@@ -160,6 +170,12 @@ header .logo img {
     font-size: 4rem;
     letter-spacing: 1.1rem;
     line-height: 4.3rem;
+  }
+}
+@media (max-height: 420px) {
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 }
 .content h1 span {
@@ -180,6 +196,12 @@ header .logo img {
     line-height: 1.7rem;
   }
 }
+@media (max-height: 420px) {
+  .content p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+}
 
 .email {
   display: flex;
@@ -191,6 +213,11 @@ header .logo img {
   .email {
     grid-area: content;
     padding: 2.5rem 0;
+  }
+}
+@media (max-height: 420px) {
+  .email {
+    padding: 1rem 0;
   }
 }
 .email-form {
@@ -219,6 +246,12 @@ header .logo img {
     height: 3.5rem;
   }
 }
+@media (max-height: 420px) {
+  .email .email__input {
+    font-size: 0.9rem;
+    height: 2.5rem;
+  }
+}
 .email .email__input:invalid {
   outline: none;
   border: 0.1rem solid #f96262;
@@ -228,6 +261,11 @@ header .logo img {
   color: #f96262;
   padding: 0.8rem 0 0 2rem;
   font-size: 0.8rem;
+}
+@media (max-height: 420px) {
+  .email .err-msg {
+    padding: 0.6rem 0 0 1rem;
+  }
 }
 .email .err-msg.active {
   display: block;
@@ -258,6 +296,12 @@ header .logo img {
     border-radius: 1.75rem;
   }
 }
+@media (max-height: 420px) {
+  .email .email__btn-submit {
+    height: 2.5rem;
+    width: 6rem;
+  }
+}
 .email .email__btn-submit.error {
   padding: 0;
 }
@@ -271,6 +315,12 @@ header .logo img {
   .email .email__btn-submit.error::before {
     right: 7rem;
     top: 1rem;
+  }
+}
+@media (max-height: 420px) {
+  .email .email__btn-submit.error::before {
+    right: 5.5rem;
+    top: 0.5rem;
   }
 }
 
